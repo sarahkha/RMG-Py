@@ -32,6 +32,8 @@ simpleReactor(
         'H2': 0.9,
     },
     terminationTime=(1e6,'s'),
+    sensitivity=['H2'],
+    sensitivityThreshold=0.001
 )
 
 simulator(
@@ -53,4 +55,5 @@ options(
     generatePlots=False,
     saveEdgeSpecies=True,
     saveSimulationProfiles=True,
+   generateSeedEachIteration=True,
 )

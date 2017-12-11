@@ -267,8 +267,11 @@ class GaussianLog:
         while line != '':
 
             if 'SCF Done:' in line:
-                E0 = float(line.split()[4]) * constants.E_h * constants.Na
-            elif 'CBS-QB3 (0 K)' in line:
+		try:
+                   E0 = float(line.split()[4]) * constants.E_h * constants.Na
+            	except:
+		   pass
+	    elif 'CBS-QB3 (0 K)' in line:
                 E0_cbs = float(line.split()[3]) * constants.E_h * constants.Na
             elif 'G3(0 K)' in line:
                 E0_cbs = float(line.split()[2]) * constants.E_h * constants.Na
