@@ -222,6 +222,8 @@ class KineticsJob:
                     kappa = 0
                     logging.info("The species in reaction {} do not have adequate information for TST, using default kinetics values.".format(reaction))
                 tunneling = reaction.transitionState.tunneling
+                ks.append(k)
+                k0s.append(k0)
                 f.write('#    {0:4g} K {1:11.3e} {2:11g} {3:11.3e} {4}\n'.format(T, k0, kappa, k, self.kunits))
             f.write('#   ======= =========== =========== =========== ===============\n')
             f.write('\n\n')
