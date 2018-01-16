@@ -511,6 +511,8 @@ class Bond(Edge):
             return 'D'
         elif self.isTriple():
             return 'T'
+        elif self.isHydrogenBond():
+            return 'H'
         else:
             raise ValueError("Bond order {} does not have string representation.".format(self.order))
         
@@ -526,6 +528,8 @@ class Bond(Edge):
             self.order = 3
         elif newOrder == 'B':
             self.order = 1.5
+        elif newOrder == 'H':
+            self.order = 0
         else:
             # try to see if an float disguised as a string was input by mistake
             try:
@@ -599,7 +603,14 @@ class Bond(Edge):
         not.
         """
         return self.isOrder(1.5)
-
+    
+    def isHydrogenBond(self):
+        """
+        Return ``True`` if the bond represents a hydrogen bond or ``False`` if
+        not.
+        """
+        return self.isOrder(0)
+    
     def incrementOrder(self):
         """
         Update the bond as a result of applying a CHANGE_BOND action to
