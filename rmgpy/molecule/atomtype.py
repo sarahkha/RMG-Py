@@ -225,9 +225,14 @@ The atomTypes naming convention is:
 <element> <valence> <characteristic bonds> <charge(optional)>
 For example:
 - N3d is nitrogen with valence=3 (i.e., 3 electronce are able to form bonds or remain as radicals) with one double bond
-- S2tc is a charged sulful with valence=2 with a triple bonds
+- S2tc is a charged sulfur with valence=2 with a triple bonds
 - Oa is atomic oxygen, i.e., a closed shell atom
 Some charged atom types were merged together, and are marked as '*Composite atomType'
+-I1s is iodine with valence=1 and one single bond (I-)
+-I3d is iodine with valence=3 and one double bond + one single bond (-I=)
+-I5dd is iodine with valence=5 and two double bonds + one single bond (-I==)
+-I5d is iodine with valence=5 and one double bond + 3 single bonds (-I==)
+-I7ddd is iodine with valence=7 and 3 double bonds + 1 single bond (-I==)
 """
 
 atomTypes = {}
@@ -242,7 +247,8 @@ atomTypes['R']    = AtomType(label='R', generic=[], specific=[
     'Ne',
     'Si','Sis','Sid','Sidd','Sit','SiO','Sib','Sibf',
     'S','Sa','S0sc','S2s','S2sc','S2d','S2dc','S2tc','S4s','S4sc','S4d','S4dd','S4dc','S4b','S4t','S4tdc','S6s','S6sc','S6d','S6dd','S6ddd','S6dc','S6t','S6td','S6tt','S6tdc',
-    'Cl','Ar']
+    'Cl','Ar',
+    'I','I1s','I3d','I5dd','I5d','I7ddd']
 )
 atomTypes['R!H']  = AtomType(label='R!H', generic=['R'], specific=[
     'He',
@@ -253,7 +259,8 @@ atomTypes['R!H']  = AtomType(label='R!H', generic=['R'], specific=[
     'Ne',
     'Si','Sis','Sid','Sidd','Sit','SiO','Sib','Sibf',
     'S','Sa','S0sc','S2s','S2sc','S2d','S2dc','S2tc','S4s','S4sc','S4d','S4dd','S4dc','S4b','S4t','S4tdc','S6s','S6sc','S6d','S6dd','S6ddd','S6dc','S6t','S6td','S6tt','S6tdc',
-    'Cl','Ar'])
+    'Cl','Ar',
+    'I','I1s','I3d','I5dd','I5d','I7ddd'])
 
 atomTypes['Val4'] = AtomType(label='Val4', generic=['R','R!H'], specific=[
     'C','Ca','Cs','Csc','Cd','CO','CS','Cdd','Cdc','Ct','Cb','Cbf','C2s','C2sc','C2d','C2dc','C2tc',
