@@ -1,0 +1,19 @@
+CanTherm execution initiated at Wed Feb 28 17:32:01 2018
+
+###############################################################
+#                                                             #
+#                          CanTherm                           #
+#                                                             #
+#   Version: 2.1.0                                            #
+#   Authors: RMG Developers (rmg_dev@mit.edu)                 #
+#   P.I.s:   William H. Green (whgreen@mit.edu)               #
+#            Richard H. West (r.west@neu.edu)                 #
+#   Website: http://reactionmechanismgenerator.github.io/     #
+#                                                             #
+###############################################################
+
+Databases not found. Making databases
+Loading frequencies group database from /home/sarahkha/RMG-database/input/statmech/groups...
+Loading transport library from GRI-Mech.py in /home/sarahkha/RMG-database/input/transport/libraries...
+Loading transport library from PrimaryTransportLibrary.py in /home/sarahkha/RMG-database/input/transport/libraries...
+Loading transport group database from /home/sarahkha/RMG-database/input/transport/groups...

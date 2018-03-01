@@ -597,7 +597,7 @@ class Network:
                 if 0.8 < k_ratio < 1.25:
                     # The difference is probably just due to numerical error
                     pass
-                elif 0.5 < k_ratio < 2.0:
+                elif 1/3.5 < k_ratio < 3.5:
                     # Might be numerical error, but is pretty large, so warn
                     warning = True
                 else:
@@ -617,7 +617,7 @@ class Network:
                 elif 0.8 < Keq_ratio < 1.25:
                     # The difference is probably just due to numerical error
                     pass
-                elif 0.5 < Keq_ratio < 2.0:
+                elif 1/3.5 < Keq_ratio < 3.5:
                     # Might be numerical error, but is pretty large, so warn
                     warning = True
                 else:
